@@ -5,15 +5,15 @@
                 {{ __('Halaman Manajemen Pencatatan Film') }}
             </h2>
 
-            <div class="flex items-center">
-                <div class="mr-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="mb-4 md:mb-0 md:mr-4 w-full md:w-auto">
                     <a href="{{ route('film.create') }}"
-                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded block text-center">
                         Catat Film Disini
                     </a>
                 </div>
 
-                <div class="">
+                <div class="w-full md:w-auto">
                     <input type="text" id="filmSearchInput" placeholder="Cari judul atau tahun film..."
                         class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
                 </div>

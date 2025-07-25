@@ -21,7 +21,7 @@
         <div class="container mx-auto px-4 flex justify-between items-center">
             <div class="flex items-center gap-2">
                 <a href="/" class="text-2xl font-bold text-teal-600">Jejak Tontonanku</a>
-                 <x-application-logo class="block h-9 w-auto fill-current text-indigo-800" />
+                <x-application-logo class="block h-9 w-auto fill-current text-indigo-800" />
             </div>
 
             @if (Route::has('login'))
@@ -75,7 +75,7 @@
                             </path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Intuitive Dashboard</h3>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Intuitif Dashboard</h3>
                     <p class="text-gray-600">Kelola catatan anda dengan kemudahan.</p>
                 </div>
                 <!-- Feature 2 -->
@@ -87,7 +87,7 @@
                                 d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Blazing Fast Performance</h3>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Performa yang kencang</h3>
                     <p class="text-gray-600">Cepat, efisien, dan nyaman. Catat tontonanmu dengan nyaman.</p>
                 </div>
                 <!-- Feature 3 -->
@@ -96,13 +96,11 @@
                         <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4">
-                            </path>
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Scalable Solutions</h3>
-                    <p class="text-gray-600">Our platform grows with your needs, offering flexible solutions for
-                        individuals and large teams alike.</p>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Fitur Pencarian</h3>
+                    <p class="text-gray-600">Temukan tontonanmu dengan mudah. Cari film favoritmu.</p>
                 </div>
             </div>
         </div>
