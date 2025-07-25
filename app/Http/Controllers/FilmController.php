@@ -16,7 +16,7 @@ class FilmController extends Controller
     {
         $user = Auth::user();
         $dataFilms = $user->films()->latest()->get();
-        
+
         return view('film.index', compact('dataFilms'));
     }
 
@@ -39,11 +39,11 @@ class FilmController extends Controller
             'tahun' => 'required|numeric',
             'isCompleted' => 'nullable|boolean',
         ]);
-        
+
         $validated['user_id'] = Auth::id();
 
         Films::create($validated);
-        
+
         return redirect()->route('film.index')->with('success', 'Film berhasil ditambahkan.');
     }
 
@@ -60,7 +60,8 @@ class FilmController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $data = Films::findOrFail($id);
+        return view('film.edit', compact('data'));
     }
 
     /**
@@ -68,7 +69,17 @@ class FilmController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $validated = $request->validate([
+            'judul' => 'required',
+            'tahun' => 'required|numeric',
+            'isCompleted' => 'nullable|boolean',
+        ]);
+
+        $film = Films::findOrFail($id);
+
+        $film->update($validated);
+
+        return redirect()->route('film.index')->with('success', 'Film berhasil diupdate.');
     }
 
     /**
@@ -76,6 +87,9 @@ class FilmController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $film = Films::findOrFail($id);
+        $film->delete();
+
+        return redirect()->route('film.index')->with('success', 'Film berhasil dihapus.');
     }
 }

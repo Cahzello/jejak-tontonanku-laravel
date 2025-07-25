@@ -5,7 +5,8 @@
                 {{ __('Halaman Manajemen Pencatatan Film') }}
             </h2>
 
-            <a href="{{ route('film.create') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <a href="{{ route('film.create') }}"
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                 Catat Film Disini
             </a>
         </div>
@@ -25,14 +26,20 @@
                                 <p class=" text mb-2">Sudah selesai: {{ $item->isCompleted == 1 ? 'Ya' : 'Tidak' }}</p>
                             </div>
                             <div class="flex m-2 p-2 gap-2">
-                                <a href="#"
+                                <a href="{{ route('film.edit', $item->id) }}"
                                     class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded">
                                     Edit Disini
                                 </a>
-                                <a href="#"
-                                    class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-                                    Delete Disini
-                                </a>
+                                <form action="{{ route('film.destroy', $item->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button
+                                        onclick="return confirm('Apakah Anda yakin ingin menghapus produk ini?')"
+                                        class="bg-red-500
+                                        hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Delete
+                                        Disini</button>
+                                </form>
+
                             </div>
                         </div>
                     </div>
