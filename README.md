@@ -5,14 +5,11 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/example/repo/actions">
-    <img src="https://github.com/example/repo/workflows/tests/badge.svg" alt="Build Status">
+  <a href="https://github.com/example/repo/blob/master/composer.json">
+    <img src="https://img.shields.io/badge/php-8.1.17-blue" alt="PHP Version">
   </a>
-  <a href="https://packagist.org/packages/example/repo">
-    <img src="https://img.shields.io/packagist/dt/example/repo" alt="Total Downloads">
-  </a>
-  <a href="https://packagist.org/packages/example/repo">
-    <img src="https://img.shields.io/packagist/v/example/repo" alt="Latest Stable Version">
+  <a href="https://github.com/example/repo/blob/master/composer.json">
+    <img src="https://img.shields.io/badge/mysql-8.0.30-blue" alt="MySQL Version">
   </a>
 </p>
 
@@ -55,5 +52,6 @@
   <li>Copy the example environment file and modify as needed: <code>cp .env.example .env</code></li>
   <li>Generate the application key: <code>php artisan key:generate</code></li>
   <li>Start the development server: <code>php artisan serve</code></li>
+  <li>Make sure you have PHP 8.1.17 and MySQL 8.0.30 installed.</li>
 </ol>
 
