@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return redirect()->route('film.index'); // Redirects to the /film route
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -31,8 +31,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-        Route::resource('/film', FilmController::class);
-    
+    Route::resource('/film', FilmController::class);
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
